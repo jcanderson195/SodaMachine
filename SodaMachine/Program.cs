@@ -11,7 +11,7 @@ namespace SodaMachine
         static void Main(string[] args)
         {
             SodaMachine test = new SodaMachine();
-            //test.AddStarterCoinsToMachine();
+            test.AddStarterSodasToMachine();
             
             Console.ReadKey();
 

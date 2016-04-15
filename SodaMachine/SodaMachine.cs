@@ -9,17 +9,19 @@ namespace SodaMachine
     class SodaMachine
     {
         List<Coin> MachineRegister;
-        
 
+        List<Soda> SodaInventory;
         public SodaMachine()
         {
             MachineRegister = new List<Coin>();
 
-            
+            SodaInventory = new List<Soda>();
         }
 
         public void Greeting()
         {
+            AddStarterCoinsToMachine();
+
             Console.WriteLine("Welcome to DevCodeCamp Soda Dispenser");
             Console.WriteLine("----------------------");
 
@@ -48,10 +50,23 @@ namespace SodaMachine
             {
                 MachineRegister.Add(new Quarter(.25));
             }
+        }       //good
+
+
+        public void AddStarterSodasToMachine()
+        {
+            for (int i = 0; i < 6; i++)
+            {
+
+                SodaInventory.Add(new Soda("Grape",.60));
+                SodaInventory.Add(new Soda("Orange", .35));
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                SodaInventory.Add(new Soda("Meat", .06));
+            }
         }
-
-        
-
 
     }
 }
