@@ -11,6 +11,7 @@ namespace SodaMachine
 
         public double dimeValue;
 
+
         public Dime(double DimeValue)
         {
             dimeValue = DimeValue;      //.10

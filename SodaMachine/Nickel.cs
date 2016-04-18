@@ -11,6 +11,7 @@ namespace SodaMachine
 
         public double nickelValue;
 
+
         public Nickel(double NickelValue)
         {
             nickelValue = NickelValue;      //.05

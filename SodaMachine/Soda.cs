@@ -11,11 +11,13 @@ namespace SodaMachine
 
         public string sodaFlavor;
         public double sodaPrice;
+        public int amountAvailable;
 
-        public Soda(string SodaFlavor, double SodaPrice)
+        public Soda(string SodaFlavor, double SodaPrice, int AmountAvailable)
         {
             sodaFlavor = SodaFlavor;
             sodaPrice = SodaPrice;
+            amountAvailable = AmountAvailable;
 
         }
 

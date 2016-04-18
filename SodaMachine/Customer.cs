@@ -25,11 +25,16 @@ namespace SodaMachine
         public double nickelAmountValue;
         public double pennyAmountValue;
 
-        List<Coin> CoinsOwned;
+        public List<Coin> CoinsOwned;
+
+        public Quarter quarter;
+        public Dime dime;
+        public Nickel nickel;
+        public Penny penny;
 
         public Customer()
         {
-            CoinsOwned = new List<Coin>();
+           CoinsOwned = new List<Coin>();
         }
 
         public double WalletBalance
@@ -53,13 +58,14 @@ namespace SodaMachine
 
             for (int i = 0; i < quarterAmount; i++)
             {
-                CoinsOwned.Add(new Quarter(.25));
+                quarter = new Quarter(.25);
+                CoinsOwned.Add(quarter);
             }
             quarterAmountValue = quarterAmount * .25;
             Console.WriteLine("----------------------");
             Console.WriteLine("You have " + quarterAmountValue + " in quarters.");
             Console.WriteLine("----------------------");
-        }
+        }       //good
 
         public void EnterDimeAmount()
         {
@@ -69,13 +75,14 @@ namespace SodaMachine
 
             for (int i = 0; i < dimeAmount; i++)
             {
-                CoinsOwned.Add(new Dime(.10));
+                dime = new Dime(.10);
+                CoinsOwned.Add(dime);
             }
             dimeAmountValue = dimeAmount * .10;
             Console.WriteLine("----------------------");
             Console.WriteLine("You have " + dimeAmountValue + " in dimes.");
             Console.WriteLine("----------------------");
-        }
+        }           //good
 
         public void EnterNickelAmount()
         {
@@ -85,13 +92,14 @@ namespace SodaMachine
 
             for (int i = 0; i < nickelAmount; i++)
             {
-                CoinsOwned.Add(new Nickel(.05));
+                nickel = new Nickel(.05);
+                CoinsOwned.Add(nickel);
             }
             nickelAmountValue = nickelAmount * .05;
             Console.WriteLine("----------------------");
             Console.WriteLine("You have " + nickelAmountValue + " in nickels.");
             Console.WriteLine("----------------------");
-        }
+        }       //good
 
         public void EnterPennyAmount()
         {
@@ -101,13 +109,14 @@ namespace SodaMachine
 
             for (int i = 0; i < pennyAmount; i++)
             {
-                CoinsOwned.Add(new Penny(.01));
+                penny = new Penny(.01);
+                CoinsOwned.Add(penny);
             }
             pennyAmountValue = pennyAmount * .01;
             Console.WriteLine("----------------------");
             Console.WriteLine("You have " + pennyAmountValue + " in pennies.");
             Console.WriteLine("----------------------");
-        }
+        }       //good
 
         public void TotalAmountToSpend()
         {
@@ -118,6 +127,6 @@ namespace SodaMachine
 
             walletBalance = quarterAmountValue + dimeAmountValue + nickelAmountValue + pennyAmountValue;
             Console.WriteLine("You have "+walletBalance+" dollars to spend today.");
-        }
+        }      //good
     }
 }

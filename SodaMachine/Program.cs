@@ -10,13 +10,12 @@ namespace SodaMachine
     {
         static void Main(string[] args)
         {
-            //SodaMachine test = new SodaMachine();
-            //test.AddStarterCoinsToMachine();
+            SodaMachine run = new SodaMachine();
+            run.Greeting();
 
-            Customer test = new Customer();
-            test.TotalAmountToSpend();
             
-            
+
+
             Console.ReadKey();
 
 
